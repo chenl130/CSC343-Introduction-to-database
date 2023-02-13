@@ -1,0 +1,120 @@
+csc343h-xushidon=> \i runner.txt 
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:13: NOTICE:  drop cascades to 19 other objects
+DETAIL:  drop cascades to table owner
+drop cascades to table venue
+drop cascades to table concert
+drop cascades to table users
+drop cascades to table section
+drop cascades to table seat
+drop cascades to table ticketprice
+drop cascades to table transaction
+drop cascades to view transaction_intermediate
+drop cascades to view all_tickets_sold
+drop cascades to view final_all_tickets_sold
+drop cascades to view total_seat
+drop cascades to view q1
+drop cascades to view q2
+drop cascades to view total
+drop cascades to view accessible
+drop cascades to view q3
+drop cascades to view num_ticket
+drop cascades to view q4
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 2
+INSERT 0 3
+INSERT 0 7
+INSERT 0 3
+INSERT 0 6
+INSERT 0 76
+INSERT 0 13
+INSERT 0 7
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:3: NOTICE:  view "transaction_intermediate" does not exist, skipping
+DROP VIEW
+psql:q1.sql:4: NOTICE:  view "all_tickets_sold" does not exist, skipping
+DROP VIEW
+psql:q1.sql:5: NOTICE:  view "total_seat" does not exist, skipping
+DROP VIEW
+psql:q1.sql:6: NOTICE:  view "final_all_tickets_sold" does not exist, skipping
+DROP VIEW
+psql:q1.sql:7: NOTICE:  view "q1" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+                 name                  |      datetime       | value |     percentage     
+---------------------------------------+---------------------+-------+--------------------
+ Ron Sexsmith                          | 2022-12-03 19:30:00 |   130 |                  4
+ Women's Blues Review                  | 2022-11-25 20:00:00 |   275 |                  8
+ Mariah Carey - Merry Christmas to all | 2022-12-09 20:00:00 |   986 | 3.3333333333333335
+ Mariah Carey - Merry Christmas to all | 2022-12-11 20:00:00 |   388 |  6.666666666666667
+ TSO - Elf in Concert                  | 2022-12-09 19:30:00 |     0 |                  0
+ TSO - Elf in Concert                  | 2022-12-10 14:30:00 |     0 |                  0
+ TSO - Elf in Concert                  | 2022-12-10 19:30:00 |   159 |  4.761904761904762
+(7 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+psql:q2.sql:3: NOTICE:  view "q2" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+                        name                         |   phone    | num 
+-----------------------------------------------------+------------+-----
+ The Corporation of Massey Hall and Roy Thomson Hall | 6144444789 |   2
+ Maple Leaf Sports & Entertainment                   | 1234567890 |   1
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+psql:q3.sql:3: NOTICE:  view "total" does not exist, skipping
+DROP VIEW
+psql:q3.sql:4: NOTICE:  view "accessible" does not exist, skipping
+DROP VIEW
+psql:q3.sql:5: NOTICE:  view "q3" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+       name       |  city   |       address       |    percentage     
+------------------+---------+---------------------+-------------------
+ Massey Hall      | Toronto | 178 Victoria Street |                24
+ Roy Thomson Hall | Toronto | 60 Simcoe St        |                 0
+ ScotiaBank Arena | Toronto | 40 Bay St           | 33.33333333333333
+(3 rows)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:3: NOTICE:  view "num_ticket" does not exist, skipping
+DROP VIEW
+psql:q4.sql:4: NOTICE:  view "q4" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+ username 
+----------
+ cristonc
+(1 row)
